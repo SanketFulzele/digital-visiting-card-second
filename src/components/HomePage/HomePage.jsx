@@ -32,7 +32,7 @@ const HomePage = () => {
 
                 <div className="hero-container">
                     <h3 className='heading-bg'> Make Your Own <br /> <span> Digital Visiting Card  </span></h3>
-                    <h6 className='heading-sm'>with meripahchaan.in</h6>
+                    <h6 className='heading-sm'>with meripahchaan.in </h6>
                 </div>
 
                 <div className="content-section">
