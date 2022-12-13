@@ -7,6 +7,7 @@ import Modal from '@mui/material/Modal';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MetaInfo from "../components/MetaInfo/MetaInfo";
+// import { Helmet } from "react-helmet";
 
 
 const style = {
@@ -76,6 +77,14 @@ const DigitalCard = () => {
     return (
         <>
 
+            {/* <Helmet>
+                <title> Digital Visiting Card </title>
+                <meta name="description" content="Make Your Digital Visiting Cards Online" />
+                <meta property="og:title" content="Digital Card Title" />
+                <meta property="og:description" content="Digital Card Description Make Your Digital Visiting Cards Online" />
+                <meta property="og:image" content="http://meripahchaan.in/admin/uploads/image/6311_dev.jpg" />
+            </Helmet> */}
+
             {/* {user !== undefined ?
                 <Helmet>
                     <title> Meri Pahchaan | Digital Visiting Card</title>
@@ -137,20 +146,20 @@ const DigitalCard = () => {
                                     : ""
                                 }
                             </div>
-                                {user !== undefined ?
-                                    <div key={user.id} className="user-contacts-container">
-                                        <div className="user-contacts-box">
-                                            <span className='text-color mid-heading'>
-                                                <EmailIcon sx={{ transform: { xs: "translateY(8px)", sm: "translateY(5px)" }, }} /> </span>
-                                            <span className='small-text'>{user.email}</span>
-                                        </div>
-                                        <div className="user-contacts-box">
-                                            <span className='text-color mid-heading'>
-                                                <PhoneIcon sx={{ transform: { xs: "translateY(8px)", sm: "translateY(5px)" }, }} /> </span>
-                                            <span className='small-text'>{user.mobile}</span>
-                                        </div>
+                            {user !== undefined ?
+                                <div key={user.id} className="user-contacts-container">
+                                    <div className="user-contacts-box">
+                                        <span className='text-color mid-heading'>
+                                            <EmailIcon sx={{ transform: { xs: "translateY(8px)", sm: "translateY(5px)" }, }} /> </span>
+                                        <span className='small-text'>{user.email}</span>
                                     </div>
-                                    : ""}
+                                    <div className="user-contacts-box">
+                                        <span className='text-color mid-heading'>
+                                            <PhoneIcon sx={{ transform: { xs: "translateY(8px)", sm: "translateY(5px)" }, }} /> </span>
+                                        <span className='small-text'>{user.mobile}</span>
+                                    </div>
+                                </div>
+                                : ""}
 
                             <div className='flex'>
                                 <div className="icons-container">

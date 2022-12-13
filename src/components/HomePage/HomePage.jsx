@@ -13,7 +13,7 @@ const HomePage = () => {
                 <meta name="description" content="Our Digital Business Card Platform Makes Designing A Card Simple, Convenient, And Reliable." />
                 <meta property="og:title" content="Meri Pahchaan | Digital Visiting Card" />
                 <meta property="og:description" content="Our Digital Business Card Platform Makes Designing A Card Simple, Convenient, And Reliable." />
-                <meta property="og:image" content="/images/trickyOne.png" />
+                <meta property="og:image" content="http://meripahchaan.in/images/trickyOne.png" />
                 <meta property="og:image:type" content="image/png" />
             </Helmet>
 
