@@ -2,7 +2,6 @@ import React from 'react'
 import { Helmet } from 'react-helmet';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
-// import MetaInfo from '../MetaInfo/MetaInfo';
 import "./homePage.css";
 
 const HomePage = () => {
@@ -16,12 +15,6 @@ const HomePage = () => {
                 <meta property="og:image" content="http://meripahchaan.in/images/trickyOne.png" />
                 <meta property="og:image:type" content="image/png" />
             </Helmet>
-
-            {/* <MetaInfo 
-                ogTitle="Meri Pahchaan | Digital Visiting Card"
-                ogDescription="Make Your Digital Visiting Cards Online"
-                ogImage="https://www.trickysys.com/admin/uploads/logo/1641464884_trricky.png"
-              /> */}
 
             <div>
 

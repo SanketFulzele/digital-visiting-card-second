@@ -2,6 +2,7 @@ import { TextField } from '@mui/material';
 import "./contact.css";
 import { Formik } from 'formik';
 import * as Yup from "yup";
+import "yup-phone";
 import { Box } from '@mui/system';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useState } from 'react';
@@ -17,6 +18,7 @@ const Contact = () => {
     const initialValues = {
         name: "",
         email: "",
+        number: "",
         message: "",
     };
 
@@ -24,6 +26,8 @@ const Contact = () => {
     const validationSchema = Yup.object().shape({
         name: Yup.string().min(2).max(25).required("Full Name is Required !"),
         email: Yup.string().email('Invalid Email address').required('Email Address is Required !'),
+        number: Yup.string().required("Mobile Number is Required")
+            .max(10, "Mobile Number is Too Long").phone('IN', true, "Phone Number is Invalid"),
         message: Yup.string().min(8).required("Message is Required !"),
     });
 
@@ -33,48 +37,58 @@ const Contact = () => {
     }
 
 
-    // const url = `http://meripahchaan.in/admin/index.php/Master/saveContact`;
+    const URL = `http://meripahchaan.in/admin/index.php/Master/saveContact`;
 
     const handleFormSubmit = (values, onSubmitProps) => {
-        console.log(values, "button clicked")
+        console.log(values, "values")
 
-        // const data = {
-        //     "name": values.name,
-        //     "email": values.email,
-        //     "message": values.subject,
-        // }
+        const data = {
+            "name": values.name,
+            "email": values.email,
+            "number": values.number,
+            "message": values.message,
+        }
 
-        // console.log(data)
+        console.log(data, "data")
 
-        notify();
-        
-        // fetch(URL, {
-        //     method: 'POST',
-        //     headers: {
-        //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(data)
-        // }).then(result => {
-        //     result.json().then(resp => {
-        //         // if(resp.success === 1 ){
-        //         //     notify();
-        //         // }else {
-
-        //         // }
-        //         console.warn(resp, "CREATE STAFF RESPONSE")
-        //     }).then(() => {
-        //         onSubmitProps.resetForm();
-        //     })
-        // })
+        fetch(URL, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then(result => {
+            result.json().then(resp => {
+                if(resp.success === 1 ){
+                    notifySuccess();
+                }else {
+                    notifyError();
+                }
+            }).then(() => {
+                onSubmitProps.resetForm();
+            })
+        })
 
         onSubmitProps.resetForm();
     }
 
-    const notify = () => {
+    const notifyError = () => {
+        toast.error('Something Wrong! ', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+
+    const notifySuccess = () => {
         toast.success('Message Sent Successfully', {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: false,
@@ -132,6 +146,21 @@ const Contact = () => {
 
                                         <TextField
                                             fullWidth
+                                            type="number"
+                                            name="number"
+                                            label="Mobile Number"
+                                            variant="outlined"
+                                            onBlur={handleBlur}
+                                            value={values.number}
+                                            onChange={handleChange}
+                                            helperText={touched.number && errors.number}
+                                            error={Boolean(errors.number && touched.number)}
+                                            sx={{ mb: 3 }}
+                                            color="success"
+                                        />
+
+                                        <TextField
+                                            fullWidth
                                             type="text"
                                             name="message"
                                             label="Please Enter Message"
@@ -153,9 +182,9 @@ const Contact = () => {
 
                                         <Box className="button-container">
                                             <button type="submit"
-                                            //  disabled={`${verified ? `false` : `true`}`}
-                                            // disabled={false}
-                                             className={`contact-btn ${verified ? "normal" : "opacity"}`}  >
+                                                //  disabled={`${verified ? `false` : `true`}`}
+                                                // disabled={false}
+                                                className={`contact-btn ${verified ? "normal" : "opacity"}`}  >
                                                 Submit
                                             </button>
                                         </Box>
@@ -165,7 +194,7 @@ const Contact = () => {
 
                             <ToastContainer
                                 position='top-right'
-                                autoClose={3000}
+                                autoClose={2000}
                                 hideProgressBar={false}
                                 newestOnTop={false}
                                 closeOnClick

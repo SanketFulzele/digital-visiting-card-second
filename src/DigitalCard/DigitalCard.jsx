@@ -7,8 +7,6 @@ import Modal from '@mui/material/Modal';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MetaInfo from "../components/MetaInfo/MetaInfo";
-// import { Helmet } from "react-helmet";
-
 
 const style = {
     position: 'absolute',
@@ -76,27 +74,6 @@ const DigitalCard = () => {
 
     return (
         <>
-
-            {/* <Helmet>
-                <title> Digital Visiting Card </title>
-                <meta name="description" content="Make Your Digital Visiting Cards Online" />
-                <meta property="og:title" content="Digital Card Title" />
-                <meta property="og:description" content="Digital Card Description Make Your Digital Visiting Cards Online" />
-                <meta property="og:image" content="http://meripahchaan.in/admin/uploads/image/6311_dev.jpg" />
-            </Helmet> */}
-
-            {/* {user !== undefined ?
-                <Helmet>
-                    <title> Meri Pahchaan | Digital Visiting Card</title>
-                    <meta name="keyword" content="Digital Card | Make Digital Visiting Card Online | Meri Pahchaan | Trickysys | Digital Visiting Card Online" />
-                    <meta name="description" content="Make Your Digital Visiting Cards Online" />
-                    <meta name="author" content="Meri Pahchaan | Make Digital Visiting Card Online" />
-                    <meta property="og:title" content="Card Title" />
-                    <meta property="og:description" content=" Card Description Make Your Digital Visiting Cards Online" />
-                    <meta property="og:image" content="http://meripahchaan.in/admin/uploads/image/6311_dev.jpg" />
-                    <meta name="twitter:card" content="summary_large_image" />
-                </Helmet>
-                : ""}  */}
 
             {user !== undefined ?
                 <MetaInfo
