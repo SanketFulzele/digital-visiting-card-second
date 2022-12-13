@@ -6,11 +6,10 @@ import { hydrate, render } from "react-dom";
 
 const APP = (
   <React.StrictMode>
-  <HashRouter>
-    <App />
-  </HashRouter>
+    <HashRouter>
+      <App />
+    </HashRouter>
   </React.StrictMode>
-  
 )
  
 const rootElement = document.getElementById("root");

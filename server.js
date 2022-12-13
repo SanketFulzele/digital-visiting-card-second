@@ -6,4 +6,35 @@
 
 // const app = express()
 
-// app.get("/", ())
+// app.get("/", (req, res) => {
+//     const filePath = path.resolve(__dirname, "./build", "index.html")
+//     fs.readFile(filePath, "utf8", (err, data) => {
+//         if(err) {
+//             return console.log(err)
+//         }
+
+//         data = data.replace(/__TITLE__/g, "Home Page").replace(/__DESCRIPTION__/g, "Home Page Description");
+
+//         res.send(data)
+//     });
+// });
+
+// app.get("/devsonsathi", (req, res) => {
+//     const filePath = path.resolve(__dirname, "./build", "index.html")
+//     fs.readFile(filePath, "utf8", (err, data) => {
+//         if(err) {
+//             return console.log(err)
+//         }
+
+//         data = data.replace(/__TITLE__/g, "Card Page").replace(/__DESCRIPTION__/g, "Card Page Description");
+
+//         res.send(data)
+//     });
+// });
+
+
+// app.use(express.static(path.resolve(__dirname, "./build")))
+
+// app.listen(PORT, () => {
+//     console.log(`Server is listening on port ${PORT}`)
+// })

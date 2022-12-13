@@ -83,8 +83,14 @@
     flex-direction: column;
 }
 
+.user-contacts-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
 .roles-box {
-    width: 450px;
+    /* width: 450px; */
     margin-top: 2px;
     text-align: left;
 }
@@ -286,7 +292,7 @@
     }
     
     .avatar-box {
-        margin-top: -100px;
+        margin-top: -80px;
     }
 
     .person-img {
@@ -320,9 +326,23 @@
 
     .roles-box {
         margin-top: 2px;
-        width: 315px;
+        /* width: 315px; */
         text-align: left;
     }
+
+    .user-contacts-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0rem;
+        align-items: center;
+    }
+
+    .user-contacts-box {
+        
+    }
+    /* .css-jy7pi5-MuiSvgIcon-root {
+
+    } */
 
     .mid-heading {
         font-size: 13px;

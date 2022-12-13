@@ -26,7 +26,7 @@ const DigitalCard = () => {
     const [user, setUser] = useState();
     const [links, setLinks] = useState([]);
     const [designations, setDesignations] = useState([]);
-    // const [userName, setUserName] = useState("");
+    const [userName, setUserName] = useState("");
 
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -63,7 +63,7 @@ const DigitalCard = () => {
                         setUser(result.data)
                         setLinks(result.data.links)
                         setDesignations(result.data.designations)
-                        // setUserName(result.data.name)
+                        setUserName(result.data.name)
                     }
                 })
             })
@@ -76,7 +76,7 @@ const DigitalCard = () => {
     return (
         <>
 
-             {/* {user !== undefined ?
+            {/* {user !== undefined ?
                 <Helmet>
                     <title> Meri Pahchaan | Digital Visiting Card</title>
                     <meta name="keyword" content="Digital Card | Make Digital Visiting Card Online | Meri Pahchaan | Trickysys | Digital Visiting Card Online" />
@@ -89,11 +89,13 @@ const DigitalCard = () => {
                 </Helmet>
                 : ""}  */}
 
-                <MetaInfo 
-                ogTitle="Digital Card Meri Pahchaan | Digital Visiting Card"
-                ogDescription="Digital Card Make Your Digital Visiting Cards Online"
-                ogImage="https://www.trickysys.com/admin/uploads/logo/1641464884_trricky.png"
-              />
+            {user !== undefined ?
+                <MetaInfo
+                    ogTitle={`${userName} | Meri Pahchaan `}
+                    ogDescription="Our Digital Business Card Platform Makes Designing A Card Simple, Convenient, And Reliable."
+                    ogImage={`${path}image/${user.image}`}
+                />
+                : ""}
 
 
             {user === undefined ? "" :
@@ -134,21 +136,21 @@ const DigitalCard = () => {
                                     )
                                     : ""
                                 }
+                            </div>
                                 {user !== undefined ?
-                                    <div key={user.id}>
-                                        <div className="roles-box">
+                                    <div key={user.id} className="user-contacts-container">
+                                        <div className="user-contacts-box">
                                             <span className='text-color mid-heading'>
-                                                <EmailIcon sx={{ transform: { xs: "translateY(8px)", sm: "translateY(5px)" }, }} /> Email -</span>
+                                                <EmailIcon sx={{ transform: { xs: "translateY(8px)", sm: "translateY(5px)" }, }} /> </span>
                                             <span className='small-text'>{user.email}</span>
                                         </div>
-                                        <div className="roles-box">
+                                        <div className="user-contacts-box">
                                             <span className='text-color mid-heading'>
-                                                <PhoneIcon sx={{ transform: { xs: "translateY(8px)", sm: "translateY(5px)" } }} /> Contact Number -</span>
+                                                <PhoneIcon sx={{ transform: { xs: "translateY(8px)", sm: "translateY(5px)" }, }} /> </span>
                                             <span className='small-text'>{user.mobile}</span>
                                         </div>
                                     </div>
                                     : ""}
-                            </div>
 
                             <div className='flex'>
                                 <div className="icons-container">

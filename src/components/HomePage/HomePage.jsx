@@ -1,32 +1,27 @@
 import React from 'react'
-// import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
-import MetaInfo from '../MetaInfo/MetaInfo';
+// import MetaInfo from '../MetaInfo/MetaInfo';
 import "./homePage.css";
 
 const HomePage = () => {
     return (
         <>
-            {/* <Helmet>
+            <Helmet>
                 <title> Meri Pahchaan | Digital Visiting Card</title>
-                <meta name="keyword" content="Digital Card | Make Digital Visiting Card Online | Meri Pahchaan | Trickysys | Digital Visiting Card Online" />
-                <meta name="description" content="Make Your Digital Visiting Cards Online" />
-                <meta name="author" content="Meri Pahchann | Make Digital Visiting Card Online" />
-                <meta property="og:title" content="Home Page Meri Pahchaan | Digital Visiting Card" />
-                <meta property="og:description" content="Home Page Make Your Digital Visiting Cards Online" />
-                <meta property="og:image" content="https://www.trickysys.com/admin/uploads/logo/1641464884_trricky.png" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta property="og:image" content="https://trickysys.com/admin/uploads/logo/1641464884_trricky.png" />
-                <meta property="og:image:secure" content="https://trickysys.com/admin/uploads/logo/1641464884_trricky.png" />
+                <meta name="description" content="Our Digital Business Card Platform Makes Designing A Card Simple, Convenient, And Reliable." />
+                <meta property="og:title" content="Meri Pahchaan | Digital Visiting Card" />
+                <meta property="og:description" content="Our Digital Business Card Platform Makes Designing A Card Simple, Convenient, And Reliable." />
+                <meta property="og:image" content="/images/trickyOne.png" />
                 <meta property="og:image:type" content="image/png" />
-            </Helmet> */}
+            </Helmet>
 
-            <MetaInfo 
-                ogTitle="Home Page Meri Pahchaan | Digital Visiting Card"
-                ogDescription="Home Page Make Your Digital Visiting Cards Online"
+            {/* <MetaInfo 
+                ogTitle="Meri Pahchaan | Digital Visiting Card"
+                ogDescription="Make Your Digital Visiting Cards Online"
                 ogImage="https://www.trickysys.com/admin/uploads/logo/1641464884_trricky.png"
-              />
+              /> */}
 
             <div>
 
