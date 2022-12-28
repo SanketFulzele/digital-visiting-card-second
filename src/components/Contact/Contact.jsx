@@ -62,9 +62,10 @@ const Contact = () => {
             result.json().then(resp => {
                 if(resp.success === 1 ){
                     notifySuccess();
-                }else {
-                    notifyError();
                 }
+                // else {
+                //     notifyError();
+                // }
             }).then(() => {
                 onSubmitProps.resetForm();
             })
@@ -73,17 +74,17 @@ const Contact = () => {
         onSubmitProps.resetForm();
     }
 
-    const notifyError = () => {
-        toast.error('Something Wrong! ', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-        });
-    }
+    // const notifyError = () => {
+    //     toast.error('Something Wrong! ', {
+    //         position: "top-right",
+    //         autoClose: 2000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: false,
+    //         draggable: true,
+    //         progress: undefined,
+    //     });
+    // }
 
     const notifySuccess = () => {
         toast.success('Message Sent Successfully', {

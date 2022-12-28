@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+
+:root {
+    --first: #1259bc;
+    --second: #f2d1c9;
+    --third: #e086d3;
+    --fourth: #fffeff;
+    --fifth: #fffcff;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/public/images/pics/sapphirebg.webp");
+}
+
+.main-card-container {
+    width: 400px;
+    height: 93vh;
+    max-height: 850px;
+    background-color: var(--first);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgb(38, 57, 77) 0px 20px 60px -10px;
+}
+
+
+.bg-img-container {
+    background-image: url("https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg?auto=compress&cs=tinysrgb&w=600");
+    background-size: cover;
+    background-position: center center;
+    height: 30vh;
+    width: 100%;
+}
+
+.person-img-container {
+    margin-top: -140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.person-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: black;
+    border: 5px solid white;
+    cursor: pointer;
+}
+
+.person-name-container {
+    padding-top: 20px;
+}
+
+.person-name {
+    text-align: center;
+    color: var(--fourth);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* Designation Container Css Start's here */
+.designationContainer {
+    padding: 0px 5px 10px 15px;
+}
+
+.designationBox {
+    margin: 10px 0px;
+    font-size: 17px;
+}
+
+.designationTitle {
+    font-weight: 800;
+    color: var(--fourth);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.designationValue {
+    color: var(--fifth);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Designation Container Css Ends's here */
+
+
+
+/* Social Icon Box Start's Here */
+
+.socialIconBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: -15px;
+}
+
+.socialIconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.socialIcons {
+    padding: 5px 5px 7px 5px;
+    width: 50px;
+    height: auto;
+    transform: translateY(6px);
+    background-color: white;
+    transition: all .3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.socialIcon:hover {
+    box-shadow: none;
+}
+
+/* Social Icon Box End's Here */
+
+
+
+
+
+/* Information Container Start's here */
+
+.information-container {
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 25px;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.information-icon-box {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    color: var(--first);
+}
+
+.information-location-icon {
+    display: flex;
+    padding-bottom: 10px,;
+    color: var(--first);
+}
+
+/* Information Container End's here */
+
+
+@media screen and (max-width: 1050px) {
+    .bg-img-container {
+        height: 25vh;
+    }
+    .main-card-container {
+        max-height: 800px;
+    }
+    .socialIconBox {
+        margin-top: 0px;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .card-content {
+        padding: 20px 10px;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .main-card-container {
+        width: 350px;
+        height: auto;
+    }
+
+    .bg-img-container {
+        height: 25vh;
+    }
+
+    .person-img-container {
+        margin-top: -105px;
+    }
+
+    .person-pic {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .designationBox {
+        margin: 7px 0px;
+        font-size: 14px;
+    }
+    .socialIconBox {
+        margin-top: -20px;
+    }
+
+    .socialIcons {
+        padding: 5px 5px 7px 5px;
+        width: 40px;
+    }
+
+    .information-container {
+        padding: 10px 20px;
+        position: static;
+        width: auto;
+        margin-bottom: -10px;
+    }
+    .information-icon-box {
+        font-size: 15px;
+    }
+    
+}

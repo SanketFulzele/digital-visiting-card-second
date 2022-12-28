@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    --text-color: rgb(167, 31, 31);
+    --bg-color: rgb(246, 243, 229);
+}
+
+.big-text {
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+}
+
+.mid-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.text-small {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+
+/* ========================================================== */
+
+.card-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/public/images/pics/a.webp");
+}
+
+.card-container {
+    width: 400px;
+    background-color: var(--bg-color);
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(62, 62, 63, 0.638) 0px 48px 100px 0px;
+}
+
+.card-top-box {
+    height: 5vh;
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-wrap: wrap;
+    padding: 0px 5px;
+    color: var(--text-color);
+    border-radius: 10px;
+}
+
+.card-img-box {
+    height: 35vh; 
+    background-image: url('https://images.pexels.com/photos/1090638/pexels-photo-1090638.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.user-img-box {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-pic {
+    width: 200px;
+    height: 200px;
+    border: 5px solid white;
+    border-radius: 50%;
+    margin-top: -150px;
+    cursor: pointer;
+}
+
+.user-details-box {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--text-color);
+}
+
+
+
+
+/* info icon box start's here */
+.info-icon-box {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10px;
+}
+
+.info-icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.info-icon-text-box {
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+/* info icon box end's here */
+
+
+
+
+
+
+
+/* Social Icon Box  Start's here*/
+
+.social-icon-box {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.social-icon-container {
+    padding: 5px;
+    border-radius: 10px;
+    margin: 3px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.social-icon-container:hover {
+    transform: scale(1.2);
+}
+
+.social-icon {
+    width: 40px;
+    height: auto;
+}
+
+/* Social Icon Box  End's here*/
+
+
+
+.type-component {
+    height: 5vh;
+    color: var(--text-color);
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+
+
+/* Designation Box Start's here */
+.designation-container {
+    color: var(--text-color);
+    padding: 0px 5px 10px 15px;
+}
+
+.designation-box {
+    margin: 8px 0px;
+    font-size: 16px;
+}
+
+.designation-mid-text {
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+}
+.designation-text-small {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Designation Box  End's here*/
+
+
+
+
+/* card Bottom code Start's here  */
+.card-bottom-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.card-bottom-box {
+    height: 1.5vh;
+    width: 100%;
+    background-color: var(--text-color);
+}
+/* card Bottom code End's here  */
+
+
+@media screen and (max-width: 550px) {
+    .card-container {
+        width: 350px;
+        height: auto;
+        box-shadow: rgba(160, 160, 162, 0.638) 0px 48px 100px 0px;
+    }
+
+    .user-pic {
+        width: 150px;
+        height: 150px;
+        margin-top: -88px;
+    }
+    .designation-box {
+        font-size: 14px;
+    }
+    .type-component {
+        height: 8vh;
+    }
+    .card-img-box {
+        height: 30vh;
+    }
+    .social-icon {
+        width: 34px;
+    }
+}
