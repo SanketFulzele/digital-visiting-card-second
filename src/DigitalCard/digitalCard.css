@@ -260,6 +260,25 @@
 }
 
 
+/* type writer box css */
+.typewriter-box {
+    height: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 30px;
+    padding: 0px 5px;
+}
+
+
+@media screen and (max-width: 550px) {
+    .typewriter-box {
+        height: 55px;
+        font-size: 12px;
+    }
+}
+
+/* type writer box css */
+
 
 
 @media screen and (max-width: 620px) {

@@ -140,8 +140,10 @@ const DigitalCard = () => {
 
                             <div className='flex'>
                                 <div className="icons-container">
-
-                                    <Typecomp />
+                                
+                                    <div className="typewriter-box">
+                                        <Typecomp />
+                                    </div>
 
                                     <div className="icons-row">
 
@@ -195,7 +197,6 @@ const DigitalCard = () => {
                     {/* modal jsx ends here */}
 
                 </div>
-
             }
         </>
     )

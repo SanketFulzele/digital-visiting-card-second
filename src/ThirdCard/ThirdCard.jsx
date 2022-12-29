@@ -22,7 +22,8 @@ const informationIcon = {
   borderRadius: "50%",
   padding: "5px",
   backgroundColor: "#1259bc",
-  fontSize: "30px"
+  fontSize: "30px",
+  marginRight: "10px"
 }
 
 
@@ -80,6 +81,7 @@ const ThirdCard = () => {
   return (
     <>
 
+     
       {user !== undefined ?
         <MetaInfo
           ogTitle={`${userName} | Meri Pahchaan `}
@@ -88,10 +90,12 @@ const ThirdCard = () => {
         />
         : ""}
 
-
+        {user === undefined ? "" :
       <div className='card-content'>
 
+
         <div className="main-card-container">
+
           <div className="bg-img-container">
           </div>
 
@@ -149,12 +153,12 @@ const ThirdCard = () => {
 
           {user === undefined ? " " : <>
             <div className="information-container">
-              <div className="information-icon-box"><SmartphoneIcon sx={informationIcon} />  &nbsp; {user.mobile} </div>
-              <div className="information-icon-box"><MailIcon sx={informationIcon} />  &nbsp; {user.email} </div>
+              <div className="information-icon-box"><SmartphoneIcon sx={informationIcon} /> {user.mobile} </div>
+              <div className="information-icon-box"><MailIcon sx={informationIcon} /> {user.email} </div>
               <div className="information-location-icon"> 
-              <span><LocationOnIcon sx={informationIcon} />  </span>  
+              <span><LocationOnIcon sx={informationIcon} /> </span>  
               
-               <span>&nbsp; {user.address} </span>
+               <span> {user.address} </span>
                  </div>
             </div>
           </>}
@@ -186,6 +190,7 @@ const ThirdCard = () => {
         </div>
 
       </div>
+    }
     </>
   )
 }

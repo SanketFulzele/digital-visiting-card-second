@@ -154,10 +154,14 @@
 
 
 .type-component {
-    height: 5vh;
     color: var(--text-color);
     font-size: 0.7rem;
     text-align: center;
+    height: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 30px;
+    padding: 0px 5px;
 }
 
 
@@ -201,10 +205,18 @@
 /* card Bottom code End's here  */
 
 
+
+
 @media screen and (max-width: 550px) {
+
+    .card-box {
+        align-items: baseline;
+        height: 100vh;
+    }
     .card-container {
-        width: 350px;
+        width: 320px;
         height: auto;
+        margin: 10px 0px 10px 0px;
         box-shadow: rgba(160, 160, 162, 0.638) 0px 48px 100px 0px;
     }
 
@@ -216,11 +228,23 @@
     .designation-box {
         font-size: 14px;
     }
-    .type-component {
-        height: 8vh;
+    .designation-container {
+        padding: 0px 5px 0px 15px;
     }
+
+    .text-small {
+        font-size: 12px;
+    }
+
+
+    .type-component {
+        font-size: 0.6rem;
+    }
+
+
     .card-img-box {
-        height: 30vh;
+        height: 25vh;
+        background-position: center center;
     }
     .social-icon {
         width: 34px;

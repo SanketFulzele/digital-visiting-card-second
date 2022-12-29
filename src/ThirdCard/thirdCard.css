@@ -20,8 +20,7 @@
 
 .main-card-container {
     width: 400px;
-    height: 93vh;
-    max-height: 850px;
+    height: 750px;
     background-color: var(--first);
     border-radius: 15px;
     overflow: hidden;
@@ -34,7 +33,7 @@
     background-image: url("https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg?auto=compress&cs=tinysrgb&w=600");
     background-size: cover;
     background-position: center center;
-    height: 30vh;
+    height: 250px;
     width: 100%;
 }
 
@@ -133,7 +132,7 @@
 /* Information Container Start's here */
 
 .information-container {
-    padding: 10px 20px;
+    padding: 10px 10px 20px 15px;
     background-color: white;
     border-radius: 25px;
     width: 100%;
@@ -151,7 +150,7 @@
 
 .information-location-icon {
     display: flex;
-    padding-bottom: 10px,;
+    align-items: center;
     color: var(--first);
 }
 
@@ -159,14 +158,8 @@
 
 
 @media screen and (max-width: 1050px) {
-    .bg-img-container {
-        height: 25vh;
-    }
-    .main-card-container {
-        max-height: 800px;
-    }
     .socialIconBox {
-        margin-top: 0px;
+        margin-top: -15px;
     }
 }
 
@@ -177,10 +170,11 @@
         padding: 20px 10px;
         width: 100vw;
         height: 100vh;
+        align-items: baseline;
     }
 
     .main-card-container {
-        width: 350px;
+        width: 330px;
         height: auto;
     }
 
@@ -214,7 +208,8 @@
         padding: 10px 20px;
         position: static;
         width: auto;
-        margin-bottom: -10px;
+        margin-top: 5px;
+        margin-bottom: -8px;
     }
     .information-icon-box {
         font-size: 15px;

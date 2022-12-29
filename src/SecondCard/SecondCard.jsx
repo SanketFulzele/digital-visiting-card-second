@@ -82,112 +82,117 @@ const SecondCard = () => {
   return (
     <>
 
-{user !== undefined ?
-                <MetaInfo
-                    ogTitle={`${userName} | Meri Pahchaan `}
-                    ogDescription="Our Digital Business Card Platform Makes Designing A Card Simple, Convenient, And Reliable."
-                    ogImage={`${path}image/${user.image}`}
-                />
+      {user !== undefined ?
+        <MetaInfo
+          ogTitle={`${userName} | Meri Pahchaan `}
+          ogDescription="Our Digital Business Card Platform Makes Designing A Card Simple, Convenient, And Reliable."
+          ogImage={`${path}image/${user.image}`}
+        />
+        : ""}
+
+
+      {user === undefined ? "" :
+        <div className='card-box'>
+          {user === undefined ? "" :
+            <div className="card-container">
+
+              <div className="card-top-box">
+                <LocationOnIcon /> {user.address}
+              </div>
+
+              <div className="card-img-box"> </div>
+
+              {user !== undefined ?
+                <>
+                  <div className="user-img-box">
+
+                    <img src={`${path}image/${user.image}`} className='user-pic' onClick={handleOpen} alt="user-pic" />
+                    <div className="user-details-box">
+                      <h1 className='big-text'> {user.name} </h1>
+                    </div>
+                  </div>
+
+                  <div className="designation-container">
+                    {designations !== undefined ?
+                      (designations.map((value) => {
+                        return (
+                          <div>
+                            <div className="designation-box" key={value.id}>
+                              <span className='designation-mid-text'> {value.designation} -</span>
+                              <span className='designation-text-small'>&nbsp; {value.description} </span>
+                            </div>
+                          </div>
+                        )
+                      })
+                      )
+                      : ""
+                    }
+                  </div>
+
+
+                  <div className="info-icon-box">
+                    <div className="info-icon-container">
+                      <PhoneIcon sx={BigIcon} />
+                      <div className="info-icon-text-box">
+                        <h4 className='mid-text'>  &nbsp; Call   &nbsp; </h4>
+                        <h4 className='text-small'>{user.mobile}</h4>
+                      </div>
+                    </div>
+                    <div className="info-icon-container">
+                      <MailIcon sx={BigIcon} />
+                      <div className="info-icon-text-box">
+                        <h4 className='mid-text'> &nbsp; Mail   &nbsp; </h4>
+                        <h4 className='text-small'> {user.email}</h4>
+                      </div>
+                    </div>
+                  </div>
+
+                </>
                 : ""}
 
-      <div className='card-box'>
-        {user === undefined ? "" :
-          <div className="card-container">
 
-            <div className="card-top-box">
-              <LocationOnIcon /> {user.address}
-            </div>
+              <div className="type-component">
+                <Typecomp />
+              </div>
 
-            <div className="card-img-box"> </div>
 
-            {user !== undefined ?
-              <>
-                <div className="user-img-box">
-
-                  <img src={`${path}image/${user.image}`} className='user-pic' onClick={handleOpen} alt="user-pic" />
-                  <div className="user-details-box">
-                    <h1 className='big-text'> {user.name} </h1>
-                  </div>
-                </div>
-
-                <div className="designation-container">
-                  {designations !== undefined ?
-                    (designations.map((value) => {
-                      return (
-                        <div>
-                          <div className="designation-box" key={value.id}>
-                            <span className='designation-mid-text'> {value.designation} -</span>
-                            <span className='designation-text-small'>&nbsp; {value.description} </span>
-                          </div>
-                        </div>
-                      )
-                    })
+              <div className="social-icon-box">
+                {links !== undefined ? (
+                  links.map((value) => {
+                    return (
+                      <div className="social-icon-container" key={value.id}>
+                        <a href={value.link} target="_blank" rel="noreferrer">
+                          <img src={`${path}types/${value.image}`} className="social-icon" alt='social-icon' />
+                        </a>
+                      </div>
                     )
-                    : ""
-                  }
-                </div>
+                  })
+                ) : ""}
+              </div>
 
+              <div className="card-bottom-container">
+                <div className="card-bottom-box"></div>
+              </div>
 
-                <div className="info-icon-box">
-                  <div className="info-icon-container">
-                    <PhoneIcon sx={BigIcon} />
-                    <div className="info-icon-text-box">
-                      <h4 className='mid-text'>  &nbsp; Call   &nbsp; </h4>
-                      <h4 className='text-small'>{user.mobile}</h4>
-                    </div>
-                  </div>
-                  <div className="info-icon-container">
-                    <MailIcon sx={BigIcon} />
-                    <div className="info-icon-text-box">
-                      <h4 className='mid-text'> &nbsp; Mail   &nbsp; </h4>
-                      <h4 className='text-small'> {user.email}</h4>
-                    </div>
-                  </div>
-                </div>
+              {/* modal jsx begins here */}
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <img src={`${path}image/${user.image}`} className="modal-img" alt='profile-pic' />
+                </Box>
+              </Modal>
+              {/* modal jsx ends here */}
 
-              </>
-              : ""}
-
-
-            <div className="type-component">
-              <Typecomp />
             </div>
+          }
+        </div>
+      }
 
-
-            <div className="social-icon-box">
-              {links !== undefined ? (
-                links.map((value) => {
-                  return (
-                    <div className="social-icon-container" key={value.id}>
-                      <a href={value.link} target="_blank" rel="noreferrer">
-                        <img src={`${path}types/${value.image}`} className="social-icon" alt='social-icon' />
-                      </a>
-                    </div>
-                  )
-                })
-              ) : ""}
-            </div>
-
-            <div className="card-bottom-container">
-            <div className="card-bottom-box"></div>
-            </div>
-
-            {/* modal jsx begins here */}
-            <Modal
-              open={open}
-              onClose={handleClose}
-              aria-labelledby="modal-modal-title"
-              aria-describedby="modal-modal-description"
-            >
-              <Box sx={style}>
-                <img src={`${path}image/${user.image}`} className="modal-img" alt='profile-pic' />
-              </Box>
-            </Modal>
-            {/* modal jsx ends here */}
-
-          </div>
-        }
-      </div>
+      
     </>
   )
 }

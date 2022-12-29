@@ -1,10 +1,9 @@
 import React from 'react'
 import Typewriter from "typewriter-effect";
-import "./typeComp.css";
 
 const Typecomp = () => {
   return (
-    <div className='typewriter-box'>
+    <>
 
       <Typewriter
         options={{
@@ -16,7 +15,7 @@ const Typecomp = () => {
           ],
         }} />
 
-    </div>
+    </>
   )
 }
 
